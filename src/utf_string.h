@@ -16,7 +16,7 @@ namespace simple_html {
             /**
              * Constructor
              */
-            utf8_to_wchar(const char* val);
+            utf8_to_wchar(const char* value);
             /**
              * the method in order to
              * generate the utf-8 type string
@@ -26,13 +26,16 @@ namespace simple_html {
                 return m_str.c_str();
             }
         private:
-            // Get backward character
-            ucode_t getb() {
+            ucode_t get_char();
+            // Get byte
+            ucode_t getbyte() {
                 if (!(m_utf8)) return 0;
                 return *m_utf8++;
             }
             // Get next utf-8 type character
-            ucode_t get_next_utf8(ucode_t val) {
+            // followed the utf-8 encoding regulation
+            // we only takes the lowest-6 bits of a specific byte
+            ucode_t get_next_utf8(ucode_t value) {
                 return (val & 0x3f);
             }
     };
@@ -45,7 +48,7 @@ namespace simple_html {
     class wchar_to_utf8 {
         std::string m_str;
         public:
-            wchar_to_utf8(const wchar_t* val);
+            wchar_to_utf8(const wchar_t* value);
             operator const char*() const {
                 return m_str.c_str();
             }
