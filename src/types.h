@@ -232,7 +232,7 @@ namespace simple_html{
         DRAW_BLOCK,
         DRAW_FLOATS,
         DRAW_INLINES,
-        DRAW_POSITIONED,
+        DRAW_POSITIONED
     };
 
     enum style_display {
@@ -251,7 +251,7 @@ namespace simple_html{
         DISPLAY_TABLE_HEADER_GROUP,
         DISPLAY_TABLE_ROW,
         DISPLAY_TABLE_ROW_GROUP,
-        DISPLAY_INLINE_TEXT,
+        DISPLAY_INLINE_TEXT
     };
 
     enum style_border {
@@ -261,7 +261,7 @@ namespace simple_html{
         BORDER_DOTTED,
         BORDER_DASHED,
         BORDER_SOLID,
-        BORDER_DOUBLE,
+        BORDER_DOUBLE
     };
 
     enum font_size {
@@ -273,17 +273,17 @@ namespace simple_html{
         FONTSIZE_X_LARGE,
         FONTSIZE_XX_LARGE,
         FONTSIZE_SMALLER,
-        FONTSIZE_LARGER,
+        FONTSIZE_LARGER
     };
 
     enum font_style {
         FONT_STYLE_NORMAL,
-        FONT_STYLE_ITALIC,
+        FONT_STYLE_ITALIC
     };
 
     enum font_variant {
         FONT_VARIANT_NORMAL,
-        FONT_VARIANT_ITALIC,
+        FONT_VARIANT_ITALIC
     };
 
     enum font_weight {
@@ -297,7 +297,7 @@ namespace simple_html{
         FONT_WEIGHT_400,
         FONT_WEIGHT_500,
         FONT_WEIGHT_600,
-        FONT_WEIGHT_700,
+        FONT_WEIGHT_700
     };
 
     enum list_style_type {
@@ -321,135 +321,394 @@ namespace simple_html{
         LIST_STYLE_TYPE_LOWER_ROMAN,
         LIST_STYLE_TYPE_UPPER_ALPHA,
         LIST_STYLE_TYPE_UPPER_LATIN,
-        LIST_STYLE_TYPE_UPPER_ROMAN,
+        LIST_STYLE_TYPE_UPPER_ROMAN
     };
 
     // TODO LISTSTYLE POSITION ENUM
     enum list_style_position {
-
+        LIST_STYLE_POSITION_INSIDE,
+        LIST_STYLE_POSITION_OUTSIDE
     };
 
     // Todo: vertical align enum
     enum vertical_align {
-
+        VERTICAL_ALIGN_BASELINE,
+        VERTICAL_ALIGN_SUB,
+        VERTICAL_ALIGN_SUPER,
+        VERTICAL_ALIGN_TOP,
+        VERTICAL_ALIGN_NEXT_TOP,
+        VERTICAL_ALIGN_MIDDLE,
+        VERTICAL_ALIGN_BOTTOM,
+        VERTICAL_ALIGN_NEXT_BOTTOM
     };
 
     // Todo: border_width enum 
     enum border_width {
-
+        BORDER_WIDTH_THIN,
+        BORDER_WIDTH_MEDIUM,
+        BORDER_WIDTH_THICK
     };
 
     // Todo border style enum
     enum border_style {
-
+        BORDER_STYLE_NONE,
+        BORDER_STYLE_HIDDEN,
+        BORDER_STYLE_DOTTED,
+        BORDER_STYLE_DASHED,
+        BORDER_STYLE_SOLID,
+        BORDER_STYLE_DOUBLE,
+        BORDER_STYLE_GROOVE,
+        BORDER_STYLE_RIDGE,
+        BORDER_STYLE_INSET,
+        BORDER_STYLE_OUTSET
     };
 
     // Todo: element float enum
     enum element_float {
-
+        FLOAT_NONE,
+        FLOAT_LEFT,
+        FLOAT_RIGHT
     };
 
     // Todo: element clear string
 
-    enum element clear {
-
+    enum element_clear {
+        CLEAR_NONE,
+        CLEAR_LEFT,
+        CLEAR_RIGHT,
+        CLEAR_BOTH
     };
 
     // Todo: css unit enum
 
     enum css_units {
-
+        CSS_UNITS_NONE,
+        CSS_UNITS_PERCENTAGE,
+        CSS_UNITS_IN,
+        CSS_UNITS_CM,
+        CSS_UNITS_MM,
+        CSS_UNITS_EM,
+        CSS_UNITS_EX,
+        CSS_UNITS_PT,
+        CSS_UNITS_PC,
+        CSS_UNITS_PX,
+        CSS_UNITS_DPI,
+        CSS_UNITS_DPCM,
+        CSS_UNITS_VW,
+        CSS_UNITS_VH,
+        CSS_UNITS_VMIN,
+        CSS_UNITS_VMAX
     };
 
     // Todo background attachment enum
 
     enum background_attachment {
-
+        BACKGROUND_ATTACHMENT_SCROLL,
+        BACKGROUND_ATTACHMENT_FIXED
     };
 
 
     // Todo: background repeat enum
     enum background_repeat {
-
+        BACKGROUND_REPEAT_REPEAT,
+        BACKGROUND_REPEAT_X,
+        BACKGROUND_REPEAT_Y,
+        BACKGROUND_REPEAT_NO_REPEAT
     };
 
     // Todo background box enum
     enum background_box {
-
+        BACKGROUND_BOX_BORDER,
+        BACKGROUND_BOX_PADDING,
+        BACKGROUND_BOX_CONTENT
     };
 
     // Todo: element position enum
     enum element_position {
-
+        ELEMENT_POSITION_STATIC,
+        ELEMENT_POSITION_RELATIVE,
+        ELEMENT_POSITION_ABSOLUTE,
+        ELEMENT_POSITION_FIXED
     };
 
     // Todo: text align enum
     enum text_align {
-
+        TEXT_ALIGN_LEFT,
+        TEXT_ALIGN_RIGHT,
+        TEXT_ALIGN_CENTER,
+        TEXT_ALIGN_JUSTIFY
     };
 
     // Todo: text transform enum 
     enum text_transform {
-
+        TEXT_TRANSFORM_NONE,
+        TEXT_TRANSFORM_CAPITALIZE,
+        TEXT_TRANSFORM_UPPERCASE,
+        TEXT_TRANSFORM_LOWERCASE
     };
 
     // Todo: white space enum
     enum white_space {
-
+        WHITE_SPACE_NORMAL,
+        WHITE_SPACE_NOWRAP,
+        WHITE_SPACE_PRE,
+        WHITE_SPACE_PRE_LINE,
+        WHITE_SPACE_PRE_WRAP
     };
 
     // Todo: overflow enum
     enum overflow {
-
+        OVERFLOW_VISIBLE,
+        OVERFLOW_HIDDEN,
+        OVERFLOW_SCROLL,
+        OVERFLOW_AUTO,
+        OVERFLOW_NO_DISPLAY,
+        OVERFLOW_NO_CONTENT
     };
 
     // Todo: background size enum
     enum background_size {
-
+        BACKGROUND_SIZE_AUTO,
+        BACKGROUND_SIZE_COVER,
+        BACKGROUND_SIZE_CONTAIN
     };
 
 
     // Todo: visibility enum
     enum visibility {
-
+        VISIBILITY_VISIBLE,
+        VISIBILITY_HIDDEN,
+        VISIBILITY_COLLAPSE
     };
 
     // Todo border collapse enum
     enum border_collapse {
-
+        BORDER_COLLAPSE_COLLAPSE,
+        BORDER_COLLAPSE_SEPARATE
     };
 
     // Todo: pseudo class enum 
     enum pseudo_class {
-
+        PSEUDO_CLASS_ONLY_CHILD,
+        PSEUDO_CLASS_ONLY_OF_TYPE,
+        PSEUDO_CLASS_FIRST_CHILD,
+        PSEUDO_CLASS_FIRST_OF_TYPE,
+        PSEUDO_CLASS_LAST_CHILD,
+        PSEUDO_CLASS_LAST_OF_TYPE,
+        PSEUDO_CLASS_NTH_CHILD,
+        PSEUDO_CLASS_NTH_OF_TYPE,
+        PSEUDO_CLASS_NTH_LAST_CHILD,
+        PSEUDO_CLASS_NTH_LAST_OF_TYPE,
+        PSEUDO_CLASS_NOT,
+        PSEUDO_CLASS_LANG
     };
 
     // Todo content property enum
     enum content_property {
-
+        CONTENT_PROPERTY_NONE,
+        CONTENT_PROPERTY_NORMAL,
+        CONTENT_PROPERTY_OPEN_QUOTE,
+        CONTENT_PROPERTY_CLOSE_QUOTE,
+        CONTENT_PROPERTY_NO_OPEN_QUOTE,
+        CONTENT_PROPERTY_NO_CLOSE_QUOTE
     };
 
     //Todo: media orientation enum
     enum media_orientation {
-
+        MEDIA_ORIENTATION_PORTRAIT,
+        MEDIA_ORIENTATION_LANDSCAPE
     };
 
     // Todo: media feature enum,
     enum media_feature {
-
+        MEDIA_FEATURE_NONE,
+        MEDIA_FEATURE_WIDTH,
+        MEDIA_FEATURE_MIN_WIDTH,
+        MEDIA_FEATURE_MAX_WIDTH,
+        MEDIA_FEATURE_HEIGHT,
+        MEDIA_FEATURE_MIN_HEIGHT,
+        MEDIA_FEATURE_MAX_HEIGHT,
+        MEDIA_FEATURE_DEVICE_WIDTH,
+        MEDIA_FEATURE_MIN_DEVICE_WIDTH,
+        MEDIA_FEATURE_MAX_DEVICE_WIDTH,
+        MEDIA_FEATURE_DEVICE_HEIGHT,
+        MEDIA_FEATURE_MIN_DEVICE_HEIGHT,
+        MEDIA_FEATURE_MAX_DEVICE_HEIGHT,
+        MEDIA_FEATURE_ORIENTATION,
+        MEDIA_FEATURE_ASPECT_RATIO,
+        MEDIA_FEATURE_MIN_ASPECT_RATIO,
+        MEDIA_FEATURE_MAX_ASPECT_RATIO,
+        MEDIA_FEATURE_DEVICE_ASPECT_RATIO,
+        MEDIA_FEATURE_MIN_DEVICE_ASPECT_RATIO,
+        MEDIA_FEATURE_MAX_DEVICE_ASPECT_RATIO,
+        MEDIA_FEATURE_COLOR,
+        MEDIA_FEATURE_MIN_COLOR,
+        MEDIA_FEATURE_MAX_COLOR,
+        MEDIA_FEATURE_MONOCHROME,
+        MEDIA_FEATURE_MIN_MONOCHROME,
+        MEDIA_FEATURE_MAX_MONOCHROME,
+        MEDIA_FEATURE_RESOLUTION,
+        MEDIA_FEATURE_MIN_RESOLUTION,
+        MEDIA_FEATURE_MAX_RESOLUTION
     };
 
     //Todo: box sizing enum
     enum box_sizing {
-
+        BOX_SIZING_CONTENT_BOX,
+        MEDIA_FEATURE_BORDER_BOX
     };
 
     // Todo: media type enum
     enum media_type {
-
+        MEDIA_TYPE_NONE,
+        MEDIA_TYPE_ALL,
+        MEDIA_TYPE_SCREEN,
+        MEDIA_TYPE_PRINT,
+        MEDIA_TYPE_BRAILLE,
+        MEDIA_TYPE_EMBOSSED,
+        MEDIA_TYPE_HANDHELD,
+        MEDIA_TYPE_PROJECTION,
+        MEDIA_TYPE_SPEECH,
+        MEDIA_TYPE_TTY,
+        MEDIA_TYPE_TV
     };
 
-    //
+    enum select_result {
+        SELECT_NO_MATCH             = 0x00,
+        SELECT_MATCH                = 0x01,
+        SELECT_MATCH_PSEUDO_CLASS   = 0x02,
+        SELECT_MATCH_WITH_BEFORE    = 0x10,
+        SELECT_MATCH_WITH_AFTER     = 0x20
+    };
+
+    enum render_type {
+        RENDER_ALL,
+        RENDER_NO_FIXED,
+        RENDER_FIXED_ONLY
+    }
+
+    struct floated_box {
+        typedef std::vector<floated_box> vector;
+        position pos;
+        element_float float_side;
+        element_clear clear_float;
+        std::shared_ptr<element> elements;
+
+
+        floated_box() = default;
+        floated_box(const floated_box &other) {
+            pos = other.pos;
+            float_side = other.float_side;
+            clear_float = other.clear_float;
+            elements = other.elements;
+        }
+        floated_box& operator=(const floated_box &other) {
+            pos = other.pos;
+            float_side = other.float_side;
+            clear_float = other.clear_float;
+            elements = other.elements;
+            return *this;
+        }
+        floated_box(floated_box &&other) {
+            pos = other.pos;
+            float_side = other.float_side;
+            clear_float = other.clear_float;
+            elements = std::move(other.elements);
+        }
+        void operator=(floated_box &&val) {
+            pos = other.pos;
+            float_side = other.float_side;
+            clear_float = other.clear_float;
+            elements = std::move(other.elements);
+        }
+    };
+
+
+    struct int_int_cache {
+        int hash_value;
+        int value;
+        bool is_valid;
+        bool is_default;
+
+        int_int_cache() {
+            hash_value = 0;
+            value = 0;
+            is_valid = false;
+            is_default = false;
+        }
+        void invalidate() {
+            is_valid = false;
+            is_default = false;
+        }
+        void set_value(int hash_result , int value_result) {
+            hash_value = hash_result;
+            value = value_result;
+            is_valid = true;
+        }
+    };
+
+
+    template <class T>
+    class def_value {
+        T m_value;
+        bool value_is_default;
+
+        public:
+            def_value(T default_value) {
+                value_is_default = true;
+                m_value = default_value;
+            }
+            void reset(T default_value) {
+                value_is_default = true;
+                m_value = default_value;
+            }
+            bool is_default() {
+                return value_is_default;
+            }
+            T operator=(T new_value) {
+                m_value = new_value;
+                value_is_default = false;
+                return m_value;
+            }
+            operator T() {
+                return m_value;
+            }
+    };
+
+    struct media_features {
+        media_type type;
+        // (pixels) For continuous media, 
+        // this is the width of the viewport 
+        // including the size of a rendered scroll bar (if any). 
+        // For paged media, this is the width of the page box.
+        int width;
+        // (pixels) The height of the targeted display area 
+        // of the output device. For continuous media, 
+        // this is the height of the viewport 
+        // including the size of a rendered scroll bar (if any). 
+        // For paged media, this is the height of the page box.
+        int height;
+        // (pixels) The width of the rendering surface 
+        // of the output device. For continuous media, 
+        // this is the width of the screen. For paged media, 
+        // this is the width of the page sheet size.
+        int device_width;
+        // (pixels) The height of the rendering surface of the output device. 
+        // For continuous media, this is the height of the screen. 
+        // For paged media, this is the height of the page sheet size.
+        int device_height;
+        // The number of bits per color component of the output device. 
+        // If the device is not a color device, the value is zero.
+        int color;
+        // The number of entries in the color lookup table of the output device. 
+        // If the device does not use a color lookup table, the value is zero.
+        int color_index;
+        // The number of bits per pixel in a monochrome frame buffer. 
+        // If the device is not a monochrome device, the output device value will be 0.
+        int monochrome;
+        // The resolution of the output device (in DPI)
+        int resolution;
+    }
 
     #define style_display_strings           _t("none;block;inline;inline-block;inline-table;list-item;table;table-caption;table-cell;table-column;table-column-group;table-footer-group;table-header-group;table-row;table-row-group")
     #define font_size_strings               _t("xx-small;x-small;small;medium;large;x-large;xx-large;smaller;larger")
@@ -482,8 +741,9 @@ namespace simple_html{
     #define box_sizing_strings		        _t("content-box;border-box")
     #define media_type_strings		        _t("none;all;screen;print;braille;embossed;handheld;projection;speech;tty;tv")
 
+    const simple_html::tchar_t* const void_elements = _t("area;base;br;col;command;embed;hr;img;input;keygen;link;meta;param;source;track;wbr");
 
-}
+};
 
 
 
